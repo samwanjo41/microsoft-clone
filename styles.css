@@ -112,7 +112,7 @@ body {
 
 .hero1 {
     width: 100%;
-    height: 575px; /* fixed hero height */
+    height: 585px; /* fixed hero height */
 
     background-image: url("./images/Hero-Desktop-Surface-Laptop-Platinum-M365-Xbox-Game-Pass-Controller.jpeg");
     background-size: cover;        /* fills area nicely */
@@ -154,7 +154,7 @@ body {
 
 .hero2 {
     width: 100%;
-    height: 575px; /* fixed hero height */
+    height: 585px; /* fixed hero height */
 
     background-image: url("./images/Hero2.jpeg");
     background-size: cover;        /* fills area nicely */
@@ -212,4 +212,394 @@ body {
 .slide {
     flex: 0 0 100%;   /* replaces width/min-width chaos */
     height: 100%;
+}
+
+.help-section {
+    margin-top: 140px;
+    margin-bottom: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 160px;
+    background-color: #1D4F86;
+    text-align: center;
+    height: 275px;
+    width: 70%;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search-container {
+  
+  height: 55px;
+  background: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px 0 22px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient line INSIDE the search box */
+.search-container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1px;
+  height: 4px;
+  background: linear-gradient(to right, #2563eb, #06b6d4);
+}
+
+.search-container input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+  color: #222;
+  font-style: italic;
+}
+
+/* Placeholder disappears automatically on focus */
+.search-container input:focus::placeholder {
+  color: transparent;
+}
+
+.search-container input::placeholder {
+  color: #9ca3af;
+  transition: 0.2s ease;
+}
+
+.send-btn {
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: transparent;
+  color: #C7C6C7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+/* Rotate airplane to face right */
+.send-btn svg {
+  transform: rotate(45deg);
+}
+
+.send-btn:hover {
+  transform: translateX(2px);
+}
+
+/* BUTTON GROUP */
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin: 0 auto;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 15px; 
+  
+}
+
+.button-group button {
+  padding: 0 22px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 14px;
+  background: #0167B9;
+  color: white;
+  font-size: 15px;
+  /* font-weight: 500; */
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.button-group button:hover { 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.icon-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  /* flex-wrap: wrap; */
+  margin-bottom: 60px;
+ 
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 8px;
+}
+
+.label {
+  font-size: 14px;
+  color: #012948;
+  position: relative;
+  padding-bottom: 6px;
+  text-align: center;
+  width: 100px;
+}
+
+/* underline */
+.label::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: #012948;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* hover effects */
+.icon-item:hover .icon {
+  transform: translateY(-3px);
+}
+
+.icon-item:hover .label::after {
+  width: 100%;
+}
+
+
+/* card section */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+
+.card {
+  width: 318px;
+  height: 500px;
+  background: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 2px solid #e5e5e5;
+}
+
+.card:hover {
+  /* transform: translateY(-6px); */
+  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}
+
+/* image wrapper (creates margin effect inside card) */
+.card-image {
+  width: 100%;
+  height: 170px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* text */
+.card-title {
+  font-size: 20px;
+  margin: 6px 12px;
+  color: #111;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-text {
+  font-size: 15px;
+  color: #555;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex-grow: 1; /* pushes button to bottom */
+  line-height: 1.4;
+  margin: 6px 12px;
+}
+
+/* button */
+.card-btn {
+  background: #0167B9;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s ease;
+  width: fit-content;
+  margin: 12px 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-btn:hover {
+  background: #014f8f;
+}
+
+
+.split-container {
+  width: 70%;
+  height: 500px;
+  margin: 40px auto 80px auto;  /* centers it horizontally + spacing from cards */
+  
+  display: flex;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 2px solid #e5e5e5;
+  /* overflow: hidden; */
+}
+
+.split-container:hover {
+  /* transform: translateY(-6px); */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.18);
+}
+
+
+/* LEFT SIDE */
+.left-content {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* pushes button to bottom */
+}
+
+/* title */
+.title {
+  margin: 0;
+  font-size: 32px;
+  color: #111;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* paragraph takes space so button stays bottom */
+.text {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+/* button only takes required space */
+.cta-btn {
+  background: #0167B9;
+  color: #fff;
+  border: none;
+  padding: 12px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+
+  width: fit-content;
+  align-self: flex-start;
+
+  transition: 0.25s ease;
+}
+
+.cta-btn:hover {
+  background: #014f8f;
+}
+
+/* RIGHT SIDE */
+.right-image {
+  width: 50%;
+  height: 100%;
+  margin: 10px; /* removes default margin */
+ 
+}
+
+.right-image img {
+  width: 100%;
+  height: 96%;
+  object-fit: cover;
+   border-radius: 20px;
+}
+
+.title-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cards-section {
+    background-color: #DCEFF8;
+    padding-top: 50px;
+    padding-bottom: 8px;
+}
+
+.cards-title {
+    margin-left: 280px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #111;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.card-large {
+  width: 435px;
+  height: 500px;
+  background: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 2px solid #e5e5e5;
+}
+
+.card-large:hover {
+  /* transform: translateY(-6px); */
+  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}
+
+/* image wrapper (creates margin effect inside card) */
+.card-image-large {
+  width: 100%;
+  height: 230px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.card-image-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* button */
+.card-btn-config {
+  background: #FFB901;
+  color: black;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: 0.3s ease;
+  width: fit-content;
+  margin: 12px 12px;
+  font-family: 'Segoe UI',sans-serif;
 }
